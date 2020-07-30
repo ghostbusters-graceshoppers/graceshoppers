@@ -1,6 +1,6 @@
 require("./config/passport");
 const express = require("express");
-const { seed, models } = require("./db");
+const { seed, models:{User, Session} } = require("./db");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const app = express();
