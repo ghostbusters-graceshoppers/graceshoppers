@@ -1,0 +1,91 @@
+{
+  "name": "graceshoppers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=\"production\"",
+    "build:watch": "webpack --watch",
+    "start": "HTTPS=true node server/index.js",
+    "start:dev": "HTTPS=true node-dev --respawn server/index.js",
+    "lint": "eslint --ext .js,.jsx server client",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
+    "test": "jest"
+  },
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlam609/graceshoppers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlam609/graceshoppers/issues"
+  },
+  "homepage": "https://github.com/jlam609/graceshoppers#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "prettier": "^2.0.5",
+    "style-loader": "^1.2.1",
+    "supertest": "^4.0.2",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.19.2",
+    "bcrpyt": "^2.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "material-table": "^1.68.0",
+    "node-dev": "^5.1.0",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.3.0",
+    "react": "^16.13.1",
+    "react-beforeunload": "^2.2.2",
+    "react-dom": "^16.13.1",
+    "react-facebook-login": "^4.1.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-stripe-checkout": "^2.6.3",
+    "react-toastify": "^6.0.8",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^6.3.3",
+    "stripe": "^8.83.0"
+  }
+}
